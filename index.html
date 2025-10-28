@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="Style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="Mortgage-Container">
+      <div class="MortGage-left-side">
+        <div class="Mortgage-calculator-and-clear">
+          <div class="Mortgage-calculator">
+            <h2>Mortgage calculator</h2>
+          </div>
+          <div class="Clear-all">
+            <button class="ClearAll"><a href="index.html">Clear all</a> </button>
+          </div>
+        </div>
+        <form method="post">
+          <div class="Mortgage-Amount-input-error">
+            <div class="mortgage-amount">
+              <label for=""> Mortgage Amount</label>
+            </div>
+            <div class="input-logo-euro">
+              <div class="logo">
+                <p>£</p>
+              </div>
+              <div class="amount-input">
+                <input type="number" class="inputForMortgageAmount" />
+              </div>
+            </div>
+            <div class="error" id="error-Amount">This fiels is required...</div>
+          </div> <br> <br>
+
+          <div class="Morgage-Term-Rate">
+            <div class="morgage-Term">
+              <div class="label-term">
+                <label for=""> Morgage term</label>
+              </div>
+              <br />
+              <div class="container-year-input">
+                <div class="input-year">
+                  <input type="number" class="inputForYear" />
+                </div>
+                <div class="years-color">
+                  <p>Years</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="morgage-Term">
+              <div class="label-term">
+                <label for=""> Interest Rate</label>
+              </div>
+              <br />
+              <div class="container-year-input rate-container">
+                <div class="input-rate">
+                  <input type="number" class="inputForInterestRate" />
+                </div>
+                <div class="color-rate">
+                  <p>%</p>
+                </div>
+              </div>
+            </div>
+          </div> <br>
+          <div class="Error">
+                <div class="error" id="error-Years">This field is required...</div>
+                <div class="error" id="error-Rate">This field is required...</div>
+          </div> <br> <br>
+
+          <div class="Mortgage-type">
+            <div class="mortgage-label">
+              <label for=""> Mortgage Type</label>
+            </div>
+
+            <div class="radio-repayment">
+              <input
+                type="radio"
+                class="radioRepayment"
+                id="radio"
+                name="mortgageType"
+              />
+              <label for="" id="radioLabel">repayment</label>
+            </div>
+            <div class="radio-interest-only">
+              <input
+                type="radio"
+                class="radioInterestOnly"
+                id="radio"
+                name="mortgageType"
+              />
+              <label for="" id="radioLabel">Interest Only</label>
+            </div>  <br>
+            <div class="error" id="error-radio">This field is required...</div>
+          </div>
+          <br />
+          <br />
+
+          <button type="submit" class="btn_submit">
+            <div class="icon-calculate">
+              <img src="./assets/images/icon-calculator.svg" alt="" />
+            </div>
+            <div class="button-text">
+              <p>Calculate Repayments</p>
+            </div>
+          </button>
+        </form>
+      </div>
+      <div class="MortGage-right-side">
+        <!-- <h2>Your result</h2> -->
+        <div class="container-empty">
+          <div class="img">
+            <img src="./assets/images/Carte.png" alt="" />
+          </div>
+          <h2>Results shown here</h2>
+          <p>
+            Complete the form and click "calculate repayments" to <br />
+            see what your monthly repayments would be.
+          </p>
+        </div>
+        <div class="container-calculate">
+          <h2>Your result</h2>
+          <p>
+            Your results are shown below based on the information <br />
+            you provider. To adjust the results. edit the form and <br />
+            click "calculate repayments" again.
+          </p>
+          <br />
+          <br />
+
+          <div class="space-repayment-calculate">
+            <p>Your monthly repayments</p>
+            <p class="monthly-repayment">
+              <span class="ValueOfRepayment"></span>
+            </p>
+            <hr />
+            <p>
+              Total you'll repay over the term <br />
+              <span class="totalOfRepayment"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="App.js"></script>
+  </body>
+</html>
