@@ -749,7 +749,8 @@ hr
 .container-calculate h2
 
 {
-    color: red;
+    color: white;
+    opacity: 1;
 }
 .space-repayment-calculate
 {
